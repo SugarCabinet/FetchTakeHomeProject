@@ -63,8 +63,8 @@ on error, function displays toast to user
                 }
                 // loading finished
                 progressBar.visibility = View.GONE
-                //sort dataObjects from urlData by descending listId, then id.
-                val sortedList = urlData.sortedWith(compareBy<DataObject> {it.listId}.thenBy { it.id })
+                //sort dataObjects from urlData by descending listId, then name.
+                val sortedList = urlData.sortedWith(compareBy<DataObject> {it.listId}.thenBy { it.name })
 
                 recyclerView.adapter = DataRecyclerAdapter(sortedList)
 
